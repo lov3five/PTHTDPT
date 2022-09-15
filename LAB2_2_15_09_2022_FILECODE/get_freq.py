@@ -18,3 +18,20 @@ data = struct.unpack('{n}h'.format(n=num_samples), data)
 # chuyển đổi dữ liệu thành 1 mảng numpy
 data = np.array(data)
 
+# Tạo ra mảng với các tần số có trong tín hiệu
+data_fft = np.fft.fft(data)
+
+frequencies = np.abs(data_fft)
+
+plt.subplot(2,1,1)
+plt.plot(data[:300])
+plt.title("Original audio wave")
+
+plt.subplot(2,1,2)
+plt.plot(frequencies)
+plt.title("Frequencies found")
+plt.xlim(0,1200)
+plt.show()
+
+
+

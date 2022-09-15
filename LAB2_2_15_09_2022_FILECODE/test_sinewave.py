@@ -47,3 +47,5 @@ wav_file.setparams((nchannels, sampwidth, int(sampling_rate), nframes, comptype,
 # writeframes: hàm ghi sóng hình sin
 for s in sine_wave:
    wav_file.writeframes(struct.pack('h', int(s*amplitude)))
+
+print(sine_wave)
