@@ -34,6 +34,7 @@ sine_wave = [np.sin(2 * np.pi * frequency * x/sampling_rate) for x in range(num_
 # nchannels: số kênh
 # sampwidth: chiều rộng mẫu (byte)
 
+
 nframes=num_samples
 comptype="NONE"
 compname="not compressed"
